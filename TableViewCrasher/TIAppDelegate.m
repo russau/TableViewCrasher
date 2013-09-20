@@ -7,15 +7,29 @@
 //
 
 #import "TIAppDelegate.h"
+#import "TIMainViewController.h"
+
 
 @implementation TIAppDelegate
+
+@synthesize navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    TIMainViewController* mainViewController = [[TIMainViewController alloc] init];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mainViewController];
+	self.navigationController = nav;
+	
+	//[self.window addSubview:[navigationController view]];
+    _window.RootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
