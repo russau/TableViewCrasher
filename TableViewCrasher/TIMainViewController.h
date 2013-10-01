@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TIMainViewController : UIViewController
+@interface TIMainViewController : UIViewController {
+    UIWebView *webView;
+}
 
 @end

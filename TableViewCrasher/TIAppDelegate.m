@@ -12,10 +12,32 @@
 
 @implementation TIAppDelegate
 
+static UIWebView* wv = nil;
+
 @synthesize navigationController;
+
++(UIWebView*)webView {
+    return wv;
+}
+
++ (void) setWebView: (UIWebView*)value {
+    wv = value;
+}
+
+- (void)takeControlOfTheCookies
+{
+    //[[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
+    NSHTTPCookieAcceptPolicy c = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookieAcceptPolicy];
+    NSLog(@"NSHTTPCookieAcceptPolicy %u", c);
+
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [self takeControlOfTheCookies];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -48,6 +70,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [self takeControlOfTheCookies];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

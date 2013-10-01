@@ -17,6 +17,11 @@
 		010567FB17ECAF1A00315F12 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010567FA17ECAF1A00315F12 /* Default@2x.png */; };
 		010567FD17ECAF1A00315F12 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 010567FC17ECAF1A00315F12 /* Default-568h@2x.png */; };
 		0105680517ECB25100315F12 /* TIMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0105680417ECB25100315F12 /* TIMainViewController.m */; };
+		0128CA5017FA90980004A0DC /* TIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0128CA4F17FA90980004A0DC /* TIWebViewController.m */; };
+		0128CA5217FA93C80004A0DC /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0128CA5117FA93C80004A0DC /* Reveal.framework */; };
+		0128CA5417FA944C0004A0DC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0128CA5317FA944C0004A0DC /* CFNetwork.framework */; };
+		0128CA5617FA94560004A0DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0128CA5517FA94560004A0DC /* QuartzCore.framework */; };
+		013FDC9817F5F35200778DC5 /* TIHTTPInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 013FDC9717F5F35200778DC5 /* TIHTTPInputStream.m */; };
 		01BAA40D17ECB8070068451C /* TICrashTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BAA40C17ECB8070068451C /* TICrashTableController.m */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +41,13 @@
 		010567FC17ECAF1A00315F12 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0105680317ECB25100315F12 /* TIMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIMainViewController.h; sourceTree = "<group>"; };
 		0105680417ECB25100315F12 /* TIMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIMainViewController.m; sourceTree = "<group>"; };
+		0128CA4E17FA90980004A0DC /* TIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIWebViewController.h; sourceTree = "<group>"; };
+		0128CA4F17FA90980004A0DC /* TIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIWebViewController.m; sourceTree = "<group>"; };
+		0128CA5117FA93C80004A0DC /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reveal.framework; path = TableViewCrasher/Reveal.framework; sourceTree = "<group>"; };
+		0128CA5317FA944C0004A0DC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0128CA5517FA94560004A0DC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		013FDC9617F5F35200778DC5 /* TIHTTPInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TIHTTPInputStream.h; sourceTree = "<group>"; };
+		013FDC9717F5F35200778DC5 /* TIHTTPInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TIHTTPInputStream.m; sourceTree = "<group>"; };
 		01BAA40B17ECB8070068451C /* TICrashTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TICrashTableController.h; sourceTree = "<group>"; };
 		01BAA40C17ECB8070068451C /* TICrashTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TICrashTableController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,9 +57,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0128CA5617FA94560004A0DC /* QuartzCore.framework in Frameworks */,
+				0128CA5417FA944C0004A0DC /* CFNetwork.framework in Frameworks */,
 				010567E717ECAF1A00315F12 /* UIKit.framework in Frameworks */,
 				010567E917ECAF1A00315F12 /* Foundation.framework in Frameworks */,
 				010567EB17ECAF1A00315F12 /* CoreGraphics.framework in Frameworks */,
+				0128CA5217FA93C80004A0DC /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +89,9 @@
 		010567E517ECAF1A00315F12 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0128CA5517FA94560004A0DC /* QuartzCore.framework */,
+				0128CA5317FA944C0004A0DC /* CFNetwork.framework */,
+				0128CA5117FA93C80004A0DC /* Reveal.framework */,
 				010567E617ECAF1A00315F12 /* UIKit.framework */,
 				010567E817ECAF1A00315F12 /* Foundation.framework */,
 				010567EA17ECAF1A00315F12 /* CoreGraphics.framework */,
@@ -91,6 +109,10 @@
 				0105680417ECB25100315F12 /* TIMainViewController.m */,
 				01BAA40B17ECB8070068451C /* TICrashTableController.h */,
 				01BAA40C17ECB8070068451C /* TICrashTableController.m */,
+				013FDC9617F5F35200778DC5 /* TIHTTPInputStream.h */,
+				013FDC9717F5F35200778DC5 /* TIHTTPInputStream.m */,
+				0128CA4E17FA90980004A0DC /* TIWebViewController.h */,
+				0128CA4F17FA90980004A0DC /* TIWebViewController.m */,
 			);
 			path = TableViewCrasher;
 			sourceTree = "<group>";
@@ -174,10 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0128CA5017FA90980004A0DC /* TIWebViewController.m in Sources */,
 				010567F317ECAF1A00315F12 /* main.m in Sources */,
 				010567F717ECAF1A00315F12 /* TIAppDelegate.m in Sources */,
 				0105680517ECB25100315F12 /* TIMainViewController.m in Sources */,
 				01BAA40D17ECB8070068451C /* TICrashTableController.m in Sources */,
+				013FDC9817F5F35200778DC5 /* TIHTTPInputStream.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +231,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Russell Sayers (NFQ52P9639)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -220,8 +245,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "52C83C07-B8B6-45D9-9BDC-CD976B6EAD19";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -239,14 +265,16 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Russell Sayers (MN7XEY357S)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "B8FB596E-41A5-44EC-B539-89A3A166D600";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -256,9 +284,14 @@
 		0105680117ECAF1A00315F12 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/sayersr/Documents/TestingZone/TableViewCrasher/TableViewCrasher,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TableViewCrasher/TableViewCrasher-Prefix.pch";
 				INFOPLIST_FILE = "TableViewCrasher/TableViewCrasher-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -267,9 +300,14 @@
 		0105680217ECAF1A00315F12 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/sayersr/Documents/TestingZone/TableViewCrasher/TableViewCrasher,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TableViewCrasher/TableViewCrasher-Prefix.pch";
 				INFOPLIST_FILE = "TableViewCrasher/TableViewCrasher-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
